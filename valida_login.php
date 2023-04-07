@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_POST['acao'])){
     require_once "adm/conexao.php";
     
@@ -15,11 +15,10 @@ if(isset($_POST['acao'])){
     $comando-> bindParam(":senha_hash",$senha_hash);
     $comando -> execute();
     if ($comando -> rowCount()==1){
-        /*echo"<br>"."existe um usuario em nossa base de dados"."<br>";
-        echo "usuario: ".$usuario."<br>";
-        echo "senha: ".$senha."<br>";
-        echo "senha cripotografada: ".$senha_hash."<br>";*/
-        header("Location: dashboard/index_dash_apagar.php");
+        $usuario = $comando -> fetch(PDO::FETCH_ASSOC);
+        $_SESSION['nome'] =$usuario['nome'];
+        //echo($_SESSION['nome']);
+        header("Location: dashboard/index_dash.php");
 
 
     }else{

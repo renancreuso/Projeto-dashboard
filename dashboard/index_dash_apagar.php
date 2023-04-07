@@ -14,14 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lista PHP</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 <body> 
     <h1>Lista de Registro do Banco de Dados</h1> 
-    <a href="cadastrar.php">Adicionar novo regsitro</a>
+    <a href="cadastrar_apagar.php">Adicionar novo regsitro</a>
     <table id="minha__tabela">
         <thead>
             <th>#ID</th>
@@ -60,7 +59,7 @@
    
 <script type="text/javascript">
 
-    $(document).ready(function() {
+    $(document).ready(()=> {
 
         $('#minha__tabela').DataTable({
 
