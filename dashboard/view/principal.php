@@ -56,7 +56,7 @@
                       <td><?php echo $pessoas["tipo_user"];?></td>
                       <td><?php echo(date('d/m/y',strtotime($pessoas["data_nasc"])));?></td>
                       <td>
-                        <a class="btn btn-sm btn-primary" href="">Editar</a>
+                        <a class="btn btn-sm btn-primary" href="editar_pessoas.php?id=<?php echo $pessoas["id"];?>">Editar</a>
                       </td>
                       <td>
                         <a class="btn btn-sm btn-danger" href="">Excluir</a>
