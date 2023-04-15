@@ -59,7 +59,7 @@
                         <a class="btn btn-sm btn-primary" href="editar_pessoas.php?id=<?php echo $pessoas["id"];?>">Editar</a>
                       </td>
                       <td>
-                        <a class="btn btn-sm btn-danger" href="">Excluir</a>
+                        <a class="btn btn-sm btn-danger" href="processa\excluir_pessoas.php?id=<?php echo $pessoas["id"];?>">Excluir</a>
                       </td>
                     </tr>
               <?php } ?>
