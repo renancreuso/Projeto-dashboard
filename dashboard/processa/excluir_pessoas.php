@@ -15,6 +15,16 @@
     $comando -> bindParam(":id",$id);
     $comando -> execute();
 
-    header("Location: ../index_dash.php");
+    if ($comando){
+        echo"<script>
+            alert('registro Excluido com Sucesso'); window.location.href='../index_dash.php';
+            </script>";
+
+    }else{  
+        echo"<script>
+            alert('Erro ao Excluir Registro!'); window.location.href='../index_dash.php';
+            </script>";
+
+    }
 
 ?>
