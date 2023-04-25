@@ -12,8 +12,8 @@
     // cripotografica 
     $senha_hash = hash('sha256',$senha);
 
-    $sql = "INSERT INTO pessoas (cpf,nome,senha,tipo_user,data_nasc,created,modified) 
-    VALUES (:cpf,:nome,:senha,:tipo_user,:data_nasc,NOW(),NOW())";
+    $sql = "INSERT INTO pessoas (cpf,nome,senha,tipo_user,data_nasc,created,modified,`status`) 
+    VALUES (:cpf,:nome,:senha,:tipo_user,:data_nasc,NOW(),NOW(),1)";
     
     $comando = $pdo -> prepare($sql);
     $comando -> bindParam(":cpf",$cpf);

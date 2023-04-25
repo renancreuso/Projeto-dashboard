@@ -1,6 +1,6 @@
 <?php
      require_once "../adm/conexao.php";
-     $sql = "SELECT * FROM pessoas";
+     $sql = "SELECT * FROM pessoas WHERE status=1 and tipo_user=2";
      $comando = $pdo ->  prepare($sql);
      $comando -> execute();
 
@@ -28,7 +28,7 @@
       
       <div>
         <h2>
-            Manutenção de Pessoas
+            Manutenção Discentes
             <a class="btn btn-success" href="cadastrar_apagar.php">Cadastrar Pessoas</a>
         </h2>
       </div>
